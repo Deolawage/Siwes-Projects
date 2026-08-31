@@ -1,0 +1,303 @@
+/*stylesheet Starts here*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+   font-family: 'Karla', sans-serif
+      font-weight: 400;
+}
+
+
+body, html {
+  margin: 0;
+  font-family: 'Karla', sans-serif 
+  
+}
+
+body{
+    background-color: hsl(148, 38%, 91%);
+    font-weight: 400;
+font-size:20px;
+color: hsl(187, 24%, 22%);
+min-height: 100vh;
+}
+
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+{
+  text-decoration: none;
+  font-family: 'Karla', sans-serif;
+  text-align: center;
+  
+}
+
+p{
+font-size: 12px;
+color: hsl(0, 66%, 54%);
+
+}
+
+span{
+  font-size: 12px;
+  color: hsl(0, 66%, 54%);
+}
+
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+line-break: normal;   
+border: 0;
+margin: 0;
+padding-bottom: 10px;
+    
+}
+
+/* Toast notification styles */
+.contact-form-success-toast{
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background-color: hsl(187, 24%, 22%); /* dark teal, matches your screenshot */
+  color: white;
+  padding: 20px 24px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 0 auto 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-form-success-toast.hidden {
+  display: none;
+}
+
+/* Toast icon and text styles */
+.toast-icon {
+  background-color: hsl(187, 24%, 22%);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+
+}
+
+.toast-text h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+
+.toast-text p {
+  margin: 0;
+  font-size: 14px;
+  color: hsl(0, 0%, 85%);
+}
+
+
+
+/* Contact form styles */
+header{
+font-size: 25px;
+font-weight: 700;
+}
+
+/* Contact form styles */
+label {
+  display: block;
+  color: hsl(187, 24%, 22%);
+  font-size: 16px;
+  padding: 10px 0; /* top/bottom only, no left/right */
+  font-weight: 400;
+}
+
+
+.contact-form{
+ display: flex;
+flex-direction: column;
+  max-width: 800px;   /* controls the actual card width */
+  margin: 0 auto;
+  gap: 10px;   
+  padding: 25px;
+  background-color: hsl(0, 0%, 100%);
+  margin-top: 40px;
+  border-radius: 20px;
+
+}
+
+.contact-name{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:flex-start;
+    gap: 20px;
+}
+
+
+
+.contact-query-type{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.contact-query-pick{
+    display: flex;
+    flex-direction: row;
+    align-self: auto;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 10px;
+  width: 100%;
+              
+}
+
+
+.contact-consent-checkbox{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+
+
+.contact-form input[type=text], .contact-form input[type=email]{
+  width: 100%;
+  height: 35px;
+  padding: 15px;
+  margin: 0;
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 10px;
+  background:hsl(0, 0%, 100%);
+  color: hsl(252, 6%, 83%);
+
+}
+
+
+.contact-form input[type=text]:hover, .contact-form input[type=email]:hover{
+  cursor: pointer;
+  text-transform: uppercase;
+  border-color:  hsl(0, 66%, 54%);
+  
+}
+
+
+.contact-form input[type=text]:active, .contact-form input[type=email]:active{
+  cursor: pointer;
+  color:hsl(186, 15%, 59%);
+border-color:  hsl(0, 66%, 54%);
+text-decoration: none;
+text-transform: uppercase;
+font-size: 15px;
+}
+
+
+textarea#message {
+  resize: none;             
+  width: 100%;
+  padding: 12px;
+  font-family: inherit;      
+  font-size: 16px;
+  line-height: 24px;
+  border: 1px solid  hsl(186, 15%, 59%);  
+  background-color: hsl(0, 0%, 100%); 
+  color: hsl(252, 6%, 83%);
+}
+
+         
+textarea#message:focus {
+  outline: none;
+  border-color:  hsl(0, 66%, 54%);
+}
+
+textarea#message::placeholder {
+  color: hsl(252, 6%, 83%);
+}
+
+
+button{
+            height:50px;
+        border:  hsl(169, 82%, 27%) solid 1px ;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 20px;
+        color:hsl(148, 38%, 91%);
+        background-color:  hsl(169, 82%, 27%);
+        width: 100%;
+      font-size:16px;
+      font-weight:700;
+     border-radius:10px;
+
+
+  }
+
+  button:hover{
+    background-color: hsl(187, 24%, 22%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+  }
+
+  button:active{
+    background-color: hsl(187, 24%, 22%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+  }
+
+
+  
+/*Media Queries */
+
+@media (max-width: 500px){
+header{
+    font-size: 25px;
+    font-weight: 700;
+}
+label {
+  font-size: 16px;
+  padding: 15px 0; /* top/bottom only, no left/right */
+}
+
+
+.contact-form{
+    margin: 20px;
+    padding: auto;
+
+}
+
+.contact-name{
+    gap: 10px;
+    font-size: 25px;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+
+
+.contact-query-type{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+.contact-consent-checkbox label{
+    gap: 10px;
+    font-size: 12px;
+}
+
+
+.attribution{
+    padding-bottom: 10px;
+}
+
+}
+

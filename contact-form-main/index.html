@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css"/>  
+  <title>Frontend Mentor | Contact form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<section>
+<div id="contact-form-popup"></div>
+<form id="contact-form" class="contact-form">
+
+<div id="contact-form-success-toast" class="contact-form-success-toast hidden">
+  <div class="toast-icon"><img src="assets/images/icon-success-check.svg" alt="Check icon"></div>
+  <div class="toast-text">
+    <h3>Message Sent!</h3>
+    <p>Thanks for Completing the Form!</p>
+  </div>
+</div>
+
+<!--Header-->
+<header>Contact Us </header>
+
+<div class="contact-name">
+
+  <div id="contact-first-name">
+<label for="first-name">  First Name </label>
+       <input type="text" name="first-name" id="first-name" required/>
+      <p class="contact-prompt"></p>
+
+</div>
+
+ <div id="contact-last-name">
+
+  <label for="last-name">Last Name</label>
+  <input type="text" name="last-name" id="last-name" required/>
+    <p class="contact-prompt"></p>
+     </div>
+</div>
+
+<label for="email-address">Email Address</label>
+<input type="email" name="email-address" id="email-address" required/>
+  <!--<p class="contact-prompt"></p>--->
+<span id="email-address-prompt"></span>
+
+<label for="query-type">Query Type</label>
+<div class="contact-query-type" id="contact-query-type">
+
+<div class="contact-query-pick">
+  <input type="radio" name="query-type" value="general-enquiry" id="general-enquiry" data-prompt="Please select a query type" data-prompt-target="general-enquiry-prompt" />
+  <label for="general-enquiry">General Enquiry</label>
+  </div>
+
+
+<div class="contact-query-pick">
+  <input type="radio" name="query-type" value="support-request" id="support-request" data-prompt="Please select a query type" data-prompt-target="support-request-prompt" />
+  <label for="support-request">Support Request</label>
+</div>
+
+</div>
+<p class="contact-prompt"></p>
+
+<label for="message"> Message</label>
+<textarea id="message" name="message" rows="5" placeholder="Type your message here..." data-prompt="Please select a query type" data-prompt-target="message-prompt" ></textarea>
+<p class="contact-prompt"></p>
+  
+
+<div class="contact-consent-checkbox">
+  <input type="checkbox" value="checkbox" name="consents" id="consent-checkbox" required data-prompt="Please select a query type" data-prompt-target="consent-checkbox-prompt"/>
+    <label for="consent-checkbox">  I consent to being contacted by the team</label> 
+</div>
+ <p class="contact-prompt" id="contact-prompt"></p>
+
+
+
+
+<button type="submit" id="btn">Submit</button>
+
+</form>
+</section>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+</body>
+<script defer src="script.js"> </script>
+</html>

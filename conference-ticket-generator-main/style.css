@@ -1,0 +1,802 @@
+
+/* Project Stylesheet starts here*/
+*{
+    box-sizing: border-box;
+    font-weight:400;
+    padding:0;
+    font-family: 'Inconsolata', monospace;
+
+}
+
+body{
+background-image:
+ url('assets/images/background-desktop.png'),
+ url('assets/images/pattern-circle.svg');
+ background-repeat: 
+ no-repeat, no-repeat;
+ background-position:center center, center;
+  background-size: cover, 250px;
+    background-attachment: fixed, fixed;
+font-weight: 400;
+font-size:20px;
+color:hsl(0, 0%, 100%);
+position: relative;
+overflow-x: hidden;
+min-height: 100vh;
+
+}
+
+
+
+body, html {
+  margin: 0;
+  font-family: 'Inconsolata', monospace;  
+  scroll-behavior: smooth;
+    
+}
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+{
+  text-decoration: none;
+  font-family: 'Inconsolata', monospace;
+  text-align: center;
+  
+}
+
+
+.bg-lines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.bg-squiggly-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px; 
+  z-index: -1;
+}
+
+
+  .bg-circle-1 {
+  position: absolute;
+  top: 425px;
+  right: 250px;
+  width: 200px;
+  z-index: -1;
+}
+
+.bg-circle-2 {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 200px;
+  z-index: -1;
+}
+
+
+/*.bg-squiggly-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px; 
+  z-index: 0;
+  
+/*.bg-circle-1 {
+  position: absolute;
+  bottom: 0;  
+  right: 0;
+
+  width: 400px;
+  z-index: 0;
+}*/
+
+.bg-squiggly-bottom{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 500px;
+  z-index: -1;
+}
+
+
+/*Main Section Starts here*/
+
+.ticket-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   /*position: relative;*/
+  z-index: 1; /* keeps your form above the background shapes */
+line-break: normal;   
+border: 0;
+margin: 0;
+}
+
+.ticket-header{
+text-align: center;
+margin-bottom: 40px;
+}
+
+.ticket-head-span{
+    color: hsl(0, 0%, 100%);
+    font-size: 15px;
+}
+
+
+#ticket-h4{
+    font-size: 14px;
+    color: hsl(252, 6%, 83%);
+}
+
+/*Ticket fom label*/
+label {
+  display: block;
+  padding: 15px 0; /* top/bottom only, no left/right */
+  color: hsl(252, 6%, 83%);
+  font-size: 20px;
+}
+
+
+.upload-buttons{
+  display: none;
+}
+
+
+
+/*Ticket-upload*/
+.ticket-form{
+display: flex;
+flex-direction: column;
+ width: 100%;
+  max-width: 500px;   /* controls the actual card width */
+  margin: 0 auto;
+  gap: 20px;   
+
+}
+
+#ticket-upload {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.ticket-form-upload-area {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;       
+  justify-content: center;   
+  padding: 20px 10px;
+  border: 2px dashed hsl(245, 19%, 35%); 
+  border-radius: 12px;
+  background-color: hsl(248, 70%, 10%);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  width: 100%;
+}
+
+/* Hover and active states for the dropzone */
+
+.ticket-form-upload-area:hover,
+.ticket-form-upload-area.dragover {
+  border-color:hsl(245, 15%, 58%);   
+  background-color: hsl(245, 19%, 35%);
+}
+
+#avatar-input-avatar{
+    color: hsl(252, 6%, 83%);
+    
+}
+
+.upload-icon {
+ width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.upload-text {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: hsl(252, 6%, 83%);
+}
+
+.upload-hint {
+  font-size: 13px;
+  color: #64748b;
+}
+
+
+/*Ticket form text arear*/
+.ticket-form-field input[type=text], .ticket-form-field input[type=email] {
+  width: 100%;
+  height: 35px;
+  padding: 15px;
+  margin: 0;
+  border: 1px solid hsl(245, 19%, 35%);
+  border-radius: 10px;
+  background:hsl(248, 70%, 10%);
+  color: hsl(252, 6%, 83%);
+  
+
+}
+
+.ticket-form-field input[type=text]:hover, .ticket-form-field input[type=email]:hover{
+  cursor: pointer;
+  background-color: hsl(245, 19%, 35%);
+  
+}
+
+
+.ticket-form-field input[type=text]:active, .ticket-form-field input[type=email]:active{
+  cursor: pointer;
+  background-color: hsl(245, 19%, 35%);
+  color:hsl(248, 70%, 10%);
+  border-color: hsl(248, 70%, 10%);
+}
+
+
+
+
+#ticket-btn{
+            height:50px;
+        border: hsl(7, 88%, 67%)solid 1px ;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 20px;
+        color: hsl(248, 70%, 10%);
+        background-color: hsl(7, 71%, 60%);
+        width: 100%;
+      font-size:16px;
+      font-weight:700;
+     border-radius:10px;
+
+
+  }
+
+  #ticket-btn:hover{
+    background-color:hsl(7, 88%, 67%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+  }
+
+
+
+
+
+/*Ticket Card Starts here*/
+
+#ticket-card{
+display: flex;
+  flex-direction: column;
+  align-items: center;
+   /*position: relative;*/
+  z-index: 1; /* keeps your form above the background shapes */
+line-break: normal;   
+border: 0;
+margin: 0;
+}
+
+.ticket-congrats-message-span{
+  color:hsl(7, 86%, 67%);
+}
+
+
+
+.ticket-display-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  width: 600px;
+  padding: 50px 80px;
+  align-items: center;
+  margin-left: 85px;
+}
+
+#ticket-display-card{
+ margin-top:40px;
+}
+
+.ticket-upper-part {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.ticket-upper-part p{
+  margin-left: 55px;
+  margin-top: 10px;
+}
+
+.ticket-below-part {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+
+.ticket-side-part {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  display: flex;
+  align-items: center;
+}
+
+
+.ticket-upper-part {
+  display: flex;
+  align-items:flex-start;
+  flex-direction: column;
+  gap: 0px;
+  font-size: 14px;
+}
+
+.ticket-upper-part img {
+  max-width: 100px;
+}
+
+.ticket-below-part {
+  display: flex;
+  align-items: center;
+height: auto;
+  justify-content: start;
+  gap: 10px;
+}
+
+#ticket-below-edit{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  gap: 2px;
+}
+
+#ticket-below-edit h3{
+  margin: 0;
+}
+
+
+.ticket-below-edit-github{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#ticket-below-edit-github img{
+    width: 16px;
+    height: 16px;
+}
+
+#ticket-github{
+    margin: 0;
+    line-height: 1;
+}
+
+.ticket-side-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+#ticket-number{
+  display: inline-block;
+  transform:rotate(90deg);
+transform-origin:center;
+white-space:nowrap;
+}
+
+.bg-ticket{
+ position: absolute;
+ inset:0;
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ 
+}
+
+.ticket-upper-part,
+.ticket-below-part,
+.ticket-side-part {
+    position: relative;
+    z-index: 1;
+}
+
+
+#ticket-card{
+  display:none;
+}
+
+
+.upload-error{
+    color: hsl(7, 88%, 67%);
+    font-size: 14px;
+    margin-top: 8px;
+    display: none;
+}
+
+
+/*Media Queries for responsiveness*/
+@media (min-width: 1024px) {
+  #ticket-form{
+width: 50%;   
+  margin: 0 auto;
+  gap: 20px;   
+}
+
+#ticket-congrats-message-h1{
+  text-align: center;
+}
+
+  .ticket-display-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 20px;
+
+    width: min(600px, 90vw);
+    aspect-ratio: 600 / 270;
+
+    padding: 30px 60px;
+
+    border-radius: 15px;
+    align-items: center;
+}
+
+  .ticket-side-part {
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+  
+
+#ticket-card{
+  width: 100%;
+  align-items: center;
+}
+
+
+  .ticket-header {
+    width: 90%;
+    
+  }
+
+  .ticket-header h1 {
+    font-size: 48px;
+    line-height: 1.1;
+  }
+
+  #ticket-h4 {
+    font-size: 16px;
+    line-height: 1.4;
+  }   
+
+  .ticket-form {
+    width: 90%;
+    max-width: 100%;
+  }
+
+  .ticket-upper-part img {
+    width: 150px;
+  }
+
+    .ticket-upper-part p {
+    margin-left: 10px;
+    white-space: no-wrap;
+    font-size: 12px;
+  }
+
+  .ticket-upper-part {
+    grid-column: 1;
+    grid-row: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+
+    font-size: 14px;
+}
+
+.ticket-upper-part img {
+    width: 140px;
+    height: auto;
+}
+
+
+  
+  #ticket-congrats-message-h1 {
+    width: 90%;
+    font-size: 27px;
+    line-height: 1.2;
+  }
+
+  #ticket-congrats-message-h4 {
+    width: 90%;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+
+  .ticket-side-part {
+    grid-column: 2;
+    grid-row: 1 / 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ticket-number {
+  display: inline-block;
+  transform: rotate(90deg);
+  transform-origin: center;
+  white-space: nowrap;
+}
+
+
+.bg-ticket{
+     position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: -1;
+
+}
+
+
+.bg-squiggly-bottom{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  z-index: -1;
+}
+
+.bg-squiggly-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px; 
+  z-index: -1;
+}
+
+
+
+} 
+
+
+/*Media queries for tablet*/
+@media (min-width: 768px) {
+
+  .ticket-display-card {
+    width: 90vw;
+    padding: 80px 80px;
+    gap: 20px;
+      margin: 20px auto 0; 
+  
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .ticket-side-part {
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+  
+
+#ticket-card{
+  width: 100%;
+  align-items: center;
+}
+
+
+  .ticket-header {
+    width: 90%;
+    
+  }
+
+  .ticket-header h1 {
+    font-size: 48px;
+    line-height: 1.1;
+  }
+
+  #ticket-h4 {
+    font-size: 26px;
+    line-height: 1.4;
+  }   
+
+  .ticket-form {
+    width: 90%;
+    max-width: 100%;
+  }
+
+  .ticket-upper-part img {
+    width: 250px;
+
+  }
+
+    .ticket-upper-part p {
+    margin-left: 10px;
+    white-space: no-wrap;
+    font-size: 25px;
+  }
+  
+#ticket-avatar{
+  width: 80px;
+}
+
+  #ticket-below-edit{
+    font-size: 25px;
+  }
+
+  #ticket-congrats-message-h1 {
+    width: 90%;
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  #ticket-congrats-message-h4 {
+    width: 90%;
+    font-size: 30px;
+    line-height: 1.0;
+  }
+
+  
+#ticket-number {
+  display: inline-block;
+  transform: rotate(90deg);
+  transform-origin: center;
+  white-space: nowrap;
+  font-size: 20px;
+}
+
+
+.bg-ticket{
+  z-index: -1;
+}
+
+
+.bg-squiggly-bottom{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  z-index: -1;
+}
+
+.bg-squiggly-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px; 
+  z-index: -1;
+}
+
+
+} 
+
+
+
+  
+    
+
+
+
+@media (max-width: 480px) {
+  .ticket-display-card {
+    width: 92vw;
+    padding: 50px 20px;
+    gap: 20px;
+      margin: 10px auto 0;
+  
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .ticket-side-part {
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+  
+
+#ticket-card{
+  width: 100%;
+  align-items: center;
+}
+
+
+  .ticket-header {
+    width: 90%;
+    
+  }
+
+  .ticket-header h1 {
+    font-size: 30px;
+    line-height: 1.1;
+  }
+
+  #ticket-h4 {
+    font-size: 16px;
+    line-height: 1.4;
+  }   
+
+  .ticket-form {
+    width: 90%;
+    max-width: 100%;
+  }
+
+  .ticket-upper-part img {
+    width: 250px;
+  }
+
+    .ticket-upper-part p {
+    margin-left: 10px;
+    white-space: no-wrap;
+    font-size: 12px;
+  }
+
+  #ticket-below-edit{
+    font-size: 12px;
+  }
+  
+  #ticket-congrats-message-h1 {
+    width: 90%;
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  #ticket-congrats-message-h4 {
+    width: 90%;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  
+#ticket-number {
+  display: inline-block;
+  transform: rotate(90deg);
+  transform-origin: center;
+  white-space: nowrap;
+}
+
+
+.bg-ticket{
+  z-index: -1;
+}
+
+
+
+.bg-squiggly-bottom{
+  position: absolute;
+  bottom: 0;
+  left: 200px ;
+  width: 100px;
+  z-index: -1;
+}
+
+.bg-squiggly-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px; 
+  z-index: -1;
+}
+
+
+} 
+
+
+
+
